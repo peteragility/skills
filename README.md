@@ -1,32 +1,37 @@
-# OpenClaw Skills
+# 🛠️ OpenClaw Skills
 
-Curated OpenClaw agent skills — merged and enhanced from multiple sources.
+Curated and enhanced OpenClaw agent skills — battle-tested in production.
 
 ## Skills
 
-| Skill | Description |
-|-------|-------------|
-| [pptx](pptx/) | PowerPoint creation, editing & analysis. 18 color palettes, 5 slide types, theme system, visual QA. |
-| [xlsx](xlsx/) | Excel creation, editing & analysis. XML unpack/repack, formula validation, financial formatting. |
-| [fact-check](fact-check/) | Rigorous fact-checking with claim decomposition, source reliability scoring, counter-search, logical fallacy detection. |
+| Skill | Lines | Description |
+|-------|-------|-------------|
+| [pptx](pptx/) | 296 | PowerPoint creation, editing & analysis. 18 color palettes, 5 slide types, theme system, page badges, visual QA with subagent review. |
+| [xlsx](xlsx/) | 328 | Excel creation, editing & analysis. XML unpack/repack (zero format loss), formula validation & fix, OOXML cheatsheet, financial model formatting standards. |
+| [fact-check](fact-check/) | 312 | Rigorous fact-checking with claim decomposition, 6-tier source reliability scoring, mandatory counter-search, logical fallacy detection, confidence scoring formula, image/video verification. |
+| [find-eat](find-eat/) | 355 | Hong Kong restaurant finder with OpenRice as golden reference. 3-source verification (OpenRice + Google + recent reviews), weather/seasonal awareness, feedback loop, verified/blacklist/closed caching. |
 
 ## Installation
 
-Copy the skill folder into your OpenClaw skills directory:
+Copy the skill folder into your OpenClaw workspace skills directory:
 
 ```bash
-# Example: install pptx skill
+# Install a single skill
 cp -r pptx/ ~/clawd/skills/pptx/
+
+# Install all skills
+cp -r pptx xlsx fact-check find-eat ~/clawd/skills/
 ```
 
 ## Credits
 
-- Base pptx/xlsx/docx skills from OpenClaw built-in skills
+- Base pptx/xlsx/docx skills from [OpenClaw](https://github.com/openclaw/openclaw) built-in skills
 - Design system, slide types, XML workflows merged from [MiniMax-AI/skills](https://github.com/MiniMax-AI/skills) (MIT)
-- Fact-check skill custom-built with claim decomposition, source tiering, and counter-search methodology
+- Fact-check and find-eat skills custom-built
 
 ## License
 
 - `pptx` — Mixed (OpenClaw Proprietary base + MIT additions from MiniMax)
 - `xlsx` — Mixed (OpenClaw Proprietary base + MIT additions from MiniMax)
 - `fact-check` — MIT
+- `find-eat` — MIT
