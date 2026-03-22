@@ -1,15 +1,1 @@
-{
-  "last_updated": "2026-03-22",
-  "restaurants": [
-    {
-      "name": "Wooloomooloo Steakhouse",
-      "district": "中環",
-      "address": "雲咸街29號 Onfem Tower",
-      "cuisine": "西餐",
-      "closed_date": "2025 或之前",
-      "source": "OpenRice 顯示 Closed",
-      "notes": "灣仔同尖沙咀分店仲開緊，只係中環結業",
-      "discovered_date": "2026-02-25"
-    }
-  ]
-}
+{"last_updated": "", "restaurants": []}
