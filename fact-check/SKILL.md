@@ -46,30 +46,30 @@ Decompose into:
 
 ### Primary Search (supporting evidence)
 
-```bash
+```
 # Current facts — append current year
-npx mcporter call tavily tavily_search query="[claim] [current year]" max_results=5
+web_search: "[claim] [current year]"
 
 # Specific events
-npx mcporter call tavily tavily_search query="[event] [date range] official OR confirmed" max_results=5
+web_search: "[event] [date range] official OR confirmed"
 
 # Statistics/numbers
-npx mcporter call tavily tavily_search query="[statistic] latest OR current [current year]" max_results=5
+web_search: "[statistic] latest OR current [current year]"
 
 # Chinese sources
-npx mcporter call tavily tavily_search query="[claim in Chinese] [current year]" max_results=5
+web_search: "[claim in Chinese] [current year]"
 ```
 
 ### Counter-Search (MANDATORY — search for disconfirming evidence)
 
 For EVERY claim, actively search for evidence that **contradicts** it:
 
-```bash
+```
 # Negate the claim
-npx mcporter call tavily tavily_search query="[claim] false OR debunked OR incorrect OR misleading" max_results=3
+web_search: "[claim] false OR debunked OR incorrect OR misleading"
 
 # Alternative explanations
-npx mcporter call tavily tavily_search query="[claim] criticism OR actually OR however" max_results=3
+web_search: "[claim] criticism OR actually OR however"
 ```
 
 **Why counter-search matters:** Confirmation bias is the #1 failure mode. If you only search for supporting evidence, you'll almost always "confirm" a claim.
