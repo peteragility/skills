@@ -1,0 +1,13 @@
+{
+  "last_updated": "2026-03-22",
+  "corrections": [
+    {
+      "name": "明閣 Ming Court",
+      "claimed_district": "中環",
+      "actual_district": "旺角",
+      "address": "旺角朗廷酒店",
+      "notes": "AI 經常搞錯，唔係中環",
+      "discovered_date": "2026-02-25"
+    }
+  ]
+}
