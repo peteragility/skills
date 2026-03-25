@@ -63,10 +63,10 @@ Read `verified.json` for previously verified restaurants matching criteria.
 
 ```
 # Primary search — OpenRice results
-web_search: "site:openrice.com [cuisine] [district] 推介 餐廳"
+search: "site:openrice.com [cuisine] [district] 推介 餐廳"
 
 # Supplementary — with year for freshness
-web_search: "openrice [district] [cuisine] [occasion] 推介 [current year]"
+search: "openrice [district] [cuisine] [occasion] 推介 [current year]"
 ```
 
 ### 4B: OpenRice Detail Page (per candidate restaurant)
@@ -89,17 +89,17 @@ browser → snapshot → extract:
 
 **If browser tool unavailable, fallback to web search:**
 ```
-web_search: "openrice [restaurant name] [district] 評分 地址 電話"
+search: "openrice [restaurant name] [district] 評分 地址 電話"
 ```
 
 ### 4C: Supplementary Search (Secondary)
 
 ```
 # Google verification
-web_search: "[restaurant name] [district] Hong Kong [current year] review"
+search: "[restaurant name] [district] Hong Kong [current year] review"
 
 # Social media verification (optional — confirm people are still visiting)
-web_search: "[restaurant name] instagram OR 小紅書 [current year]"
+search: "[restaurant name] instagram OR 小紅書 [current year]"
 ```
 
 ---
@@ -116,7 +116,7 @@ web_search: "[restaurant name] instagram OR 小紅書 [current year]"
 
 ```
 # Closure verification search
-web_search: "[restaurant name] [district] 結業 closed permanently closed [current year]"
+search: "[restaurant name] [district] 結業 closed permanently closed [current year]"
 ```
 
 ### Verdict Rules

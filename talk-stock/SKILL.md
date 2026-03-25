@@ -26,8 +26,8 @@ python3 <skill-dir>/scripts/fetch_stock_data.py TICKER
 This returns JSON with: info (price, PE, margins, targets), technicals (RSI, MACD, SMAs, volume), quarterly financials (4 quarters), analyst recommendations, balance sheet, and cash flow. Parse this output and use it throughout all agent sections below. This avoids making 10+ separate API calls and keeps the analysis consistent.
 
 Then search for news separately:
-```bash
-npx mcporter call tavily tavily_search query="TICKER stock news analysis bull bear case 2026" max_results=5
+```
+search: "TICKER stock news analysis bull bear case 2026"
 ```
 
 ## The Analysis Team
@@ -164,9 +164,9 @@ For data yfinance doesn't cover well (key in `~/.clawdbot/.env` → `FINNHUB_API
 - `https://finnhub.io/api/v1/stock/metric?symbol=X&metric=all` — additional metrics
 - Crypto: `BINANCE:BTCUSDT`
 
-### Tertiary: Tavily MCP
-For news, sentiment, recent articles:
-- `npx mcporter call tavily tavily_search query="..." max_results=5`
+### Tertiary: Web Search
+For news, sentiment, recent articles — search the web for relevant queries.
+Use `web_fetch` for specific URLs if needed.
 
 ### For specific pages: web_fetch
 When you need to read a specific article or data page.

@@ -25,7 +25,7 @@ cp -r pptx/ ~/your-workspace/skills/pptx/
 cp -r pptx xlsx fact-check find-eat ~/your-workspace/skills/
 ```
 
-Skills use generic `web_search` instructions — compatible with any search tool (Tavily, Brave, Google, etc).
+Skills use generic `search:` instructions — compatible with any search tool (Tavily, Brave, Google, etc).
 
 ## Skill Details
 

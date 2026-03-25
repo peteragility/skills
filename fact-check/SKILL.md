@@ -48,16 +48,16 @@ Decompose into:
 
 ```
 # Current facts — append current year
-web_search: "[claim] [current year]"
+search: "[claim] [current year]"
 
 # Specific events
-web_search: "[event] [date range] official OR confirmed"
+search: "[event] [date range] official OR confirmed"
 
 # Statistics/numbers
-web_search: "[statistic] latest OR current [current year]"
+search: "[statistic] latest OR current [current year]"
 
 # Chinese sources
-web_search: "[claim in Chinese] [current year]"
+search: "[claim in Chinese] [current year]"
 ```
 
 ### Counter-Search (MANDATORY — search for disconfirming evidence)
@@ -66,10 +66,10 @@ For EVERY claim, actively search for evidence that **contradicts** it:
 
 ```
 # Negate the claim
-web_search: "[claim] false OR debunked OR incorrect OR misleading"
+search: "[claim] false OR debunked OR incorrect OR misleading"
 
 # Alternative explanations
-web_search: "[claim] criticism OR actually OR however"
+search: "[claim] criticism OR actually OR however"
 ```
 
 **Why counter-search matters:** Confirmation bias is the #1 failure mode. If you only search for supporting evidence, you'll almost always "confirm" a claim.
@@ -78,7 +78,7 @@ web_search: "[claim] criticism OR actually OR however"
 
 | Language | Approach |
 |----------|----------|
-| English | Default Tavily search |
+| English | Default web search |
 | Chinese | Search both 簡體 + 繁體 terms; check 新華社, 南華早報, 明報 |
 | Mixed | Search in BOTH languages, compare narratives |
 
